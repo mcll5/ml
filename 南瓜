@@ -1,0 +1,108 @@
+import random
+
+
+def halloween_greetings():
+    greetings = [
+        "祝你度过一个鬼马精灵的万圣节！",
+        "愿你的万圣节充满欢乐和惊喜！",
+        "希望你的万圣节充满糖果和开心！",
+        "愿你的万圣节夜晚充满神秘和魔力！",
+        "祝你在万圣节中玩得开心，吃得开心！",
+        "愿你的万圣节充满恐怖和刺激！",
+        "希望你的万圣节充满笑声和欢乐！",
+        "祝你的万圣节充满魔法和奇迹！"
+    ]
+
+    random_greeting = random.choice(greetings)
+    print(random_greeting)
+
+
+halloween_greetings()
+import turtle
+
+# 设置画布和画笔
+canvas = turtle.Screen()
+canvas.bgcolor("black")
+pen = turtle.Turtle()
+pen.speed(2)
+
+# 绘制月亮
+pen.penup()
+pen.goto(-200, 200)
+pen.pendown()
+pen.color("white")
+pen.begin_fill()
+pen.circle(50)
+pen.end_fill()
+
+# 绘制树枝
+pen.penup()
+pen.goto(-250, 150)
+pen.pendown()
+pen.color("brown")
+pen.width(10)
+pen.goto(-150, 150)
+
+# 绘制树叶
+pen.penup()
+pen.goto(-200, 200)
+pen.pendown()
+pen.color("white")
+pen.begin_fill()
+pen.circle(50)
+pen.end_fill()
+
+# 绘制南瓜头
+pen.penup()
+pen.goto(0, -100)
+pen.pendown()
+pen.color("orange")
+pen.begin_fill()
+pen.circle(100)
+pen.end_fill()
+
+# 绘制南瓜头的眼睛
+pen.penup()
+pen.goto(-40, 20)
+pen.pendown()
+pen.color("black")
+pen.begin_fill()
+pen.circle(15)
+pen.end_fill()
+
+pen.penup()
+pen.goto(40, 20)
+pen.pendown()
+pen.begin_fill()
+pen.circle(15)
+pen.end_fill()
+
+# 绘制南瓜头的嘴巴
+pen.penup()
+pen.goto(-60, -30)
+pen.pendown()
+pen.color("black")
+pen.width(5)
+pen.goto(60, -30)
+
+# 绘制南瓜头的鼻子
+pen.penup()
+pen.goto(0, 10)
+pen.pendown()
+pen.color("black")
+pen.begin_fill()
+pen.goto(10, -10)
+pen.goto(-10, -10)
+pen.goto(0, 10)
+pen.end_fill()
+
+# 绘制万圣节文字
+pen.penup()
+pen.goto(-100, -200)
+pen.pendown()
+pen.color("white")
+pen.write("Happy Halloween!", align="center", font=("Arial", 30, "bold"))
+
+# 完成绘制
+pen.hideturtle()
+turtle.done()
